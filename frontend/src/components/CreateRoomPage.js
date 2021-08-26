@@ -46,8 +46,9 @@ export default class CreateRoomPage extends Component {
                 guest_can_pause: this.state.guestCanPause
             }),
         };
-        fetch('/api/create-room', requestOptions).then((response) => response.json()).then((date) => console.log(date));
+        fetch('/api/create-room', requestOptions).then((response) => response.json()).then((data) => this.props.history.push('/room/' + data.code));
     }
+
 
     render() {
         return (
@@ -62,7 +63,7 @@ export default class CreateRoomPage extends Component {
                 <Grid item xs={12} align="center">
                     <FormControl component="fieldset">
 
-                        <FormHelperText>
+                        <FormHelperText >
                             <div align="center">Guest Control of Playback State</div>
                         </FormHelperText>
 
