@@ -1,1 +1,5 @@
+#venv activation script
 activate.sh
+
+#API credentials
+spotify/credentials.py
